@@ -1,0 +1,414 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: PingFangSC-Regular;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    //a元素高亮效果
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+img{
+    display: block;
+}
+            
+input{
+    outline: none;
+}
+
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+@import 'mixin/mixin.less';
+//定义变量
+@rem:23.4375rem;
+
+
+#charging{
+    width:100%;
+    height:20/@rem;
+    
+    img{
+        width:100%;
+        height:20/@rem;
+        background: #000000;
+    }
+}
+#theme{
+    width:100%;
+    height:44/@rem;
+    line-height:44/@rem ;
+    font-size: 18/@rem;
+    color:#262A32;
+    text-align: center;
+    .border-1px(@color:#ccc);
+}
+
+#wrap{
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+    //头部
+    #header{
+        width: 375/@rem;
+        height: 44/@rem;
+        background: #fff;
+        position: relative;
+        .city{
+            position: absolute;
+            left: 15/@rem;
+            top: 14/@rem;
+            height: 17/@rem;
+            font-size: 12/@rem;
+            color: #666666;
+        }
+        img{
+            position: absolute;
+            left: 44/@rem;
+            top: 20/@rem;
+            width:7/@rem;
+            height:4/@rem;
+        }
+        h2{
+            height: 44/@rem;
+            line-height: 44/@rem;
+            color: #333;
+            font-size: 14/@rem;
+            text-align: center;
+        }
+        .icon{
+            position: absolute;
+            top: 14/@rem;
+            right: 12/@rem;
+            width: 25/@rem;
+            height: 25/@rem;
+            background-image: url(../img/nav_filter.png);
+            background-repeat: no-repeat;
+            background-size:25/@rem 25/@rem ;
+        }        
+    }
+    //模拟滑动范围
+    #conWrap{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top:108/@rem;
+        bottom: 160/@rem;
+        overflow: hidden;
+        
+        .content{
+            //banner
+            .banner{
+                width: 375/@rem;
+                height: 94/@rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            //nav
+            .navWrap{
+                height: 44/@rem;
+                position: relative;
+                .border-1px(@color:#ccc);
+                
+                a{
+                    float: left;
+                    width: 50%;
+                    height:44/@rem;
+                    line-height: 44/@rem;
+                    text-align: center;
+                    color: #999999;
+                    &.active{
+                        color: #38404D;
+                    }
+                }
+                .smallGrey{
+                    position: absolute;
+                    left: 84/@rem;
+                    bottom: 0;
+                    width: 20/@rem;
+                    height: 2/@rem;
+                    background: #262A32;
+                  
+                }
+            }
+            //列表
+            .list{
+                
+                li{
+                    .border-1px(@color:#ccc);
+                }
+              
+                &:before{
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 10/@rem;
+                    background: #F5F5F5;
+                }
+                .liTop{                 
+                    overflow: hidden;                 
+                    img{
+                        float: left;
+                        margin-top: 16/@rem;
+                        margin-left: 15/@rem;
+                        width: 68/@rem;
+                        height: 90/@rem;
+                    }
+                    .line{                        
+                        float: right;
+                        width: 282/@rem;
+                        height: 116/@rem;
+                        .border-1px(@color:#ccc);
+                        
+                    }
+                    .liContent{
+                        float: left;
+                        margin-top:16/@rem;
+                        width: 160/@rem;
+                        height: 90/@rem;
+                        h3{
+                            width: 100%;
+                            height: 21/@rem;
+                            line-height:21/@rem ;
+                            font-size: 15/@rem;
+                            color: #333333;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        p{
+                            height: 17/@rem;
+                            line-height: 17/@rem;
+                            font-size: 12/@rem;
+                            color: #999999;
+                        }
+                        .icons{
+                            height: 15/@rem;
+                            line-height: 15/@rem;
+                            span{  
+                                float: left;                                                          
+                                font-size: 12/@rem;
+                                border-radius: 2/@rem;                                
+                                box-sizing: border-box;
+                                margin-right: 5/@rem;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                &:nth-child(1){
+                                    border: 1px solid #FF4E4E;
+                                    color: #FF4E4E;
+                                }
+                                &:nth-child(2){
+                                    border: 1px solid #FF8500;
+                                    color: #FF8500;
+                                }
+                                &:nth-child(3){
+                                    border: 1px solid #BC75F3;
+                                    color: #BC75F3;
+                                }
+                                &:nth-child(4){
+                                    border: 1px solid #6CC531;
+                                    color: #6CC531;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .imax{
+                        float: left;
+                        margin-top:16/@rem;
+                        width:42/@rem;
+                        height: 14/@rem;
+                        line-height: 14/@rem;
+                        border-radius: 18/@rem;
+                        border:1/@rem solid #666;
+                        font-size: 14/@rem;
+                        color: #666;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                    .price{
+                        float: right;
+                        margin-top:16/@rem;
+                        margin-right: 15/@rem;
+                        height: 21/@rem;
+                        line-height: 21/@rem;
+                        color: #FF5200;
+                        font-size: 15/@rem;
+                        span{
+                            font-size: 12/@rem;
+                        }
+                    }
+                    .buy{
+                        position: absolute;
+                        right: 15/@rem;
+                        bottom: 10/@rem;
+                        width: 60/@rem;
+                        height: 26/@rem;
+                        background-image: linear-gradient(90deg,#FF5200,#FF7530);
+                        color: #fff;
+                        border-radius: 61/@rem;
+                        box-shadow: 0px 2/@rem 6/@rem 0px #F4BEA4;
+                        font-size: 14/@rem;
+                        text-align: center;
+                        line-height: 26/@rem;
+                    }
+                    
+                }
+                .liTime{
+                    padding: 10/@rem 0;
+                    overflow: hidden;
+                    h4{
+                        float: left;
+                        width: 53/@rem;
+                        height: 18/@rem;
+                        line-height: 18/@rem;
+                        margin-left: 15/@rem;
+                        font-size: 13/@rem;
+                        color: #333333;
+                    }
+                    .showTime{
+                        float: left;
+                        margin-left: 20/@rem;
+                        width: 181/@rem;
+                        font-size: 13/@rem;
+                        color: #999999;
+                        .row1{
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                        .row2{
+                            display: flex;
+                            justify-content: space-between;
+                            &.active{
+                              display: none;  
+                            }
+                        }
+                    }
+                    a{
+                        float: right;
+                        margin-right: 15/@rem;
+                        height: 18/@rem;
+                        font-size: 13/@rem;
+                        color: #FF801A;
+                        &:after{
+                            content: '收起';
+                        }
+                        &.active:after{
+                            content: '展开';
+                        }
+                        
+                    }
+                }
+            }
+            
+            
+        }
+    }
+    //影院
+    #film{
+        position: absolute;
+        left: 0;
+        bottom: 60/@rem;
+        width: 375/@rem;
+        height: 90/@rem;
+        background: #fff;
+        img{
+            position: absolute;
+            left: 15/@rem;
+            top: 10/@rem;
+            width: 40/@rem;
+            height: 40/@rem;
+        }
+        h2{
+            position: absolute;
+            left: 65/@rem;
+            top: 9/@rem;
+            height: 22/@rem;
+            font-size: 16/@rem;
+            color: #333333;
+        }
+        p{
+            position: absolute;
+            left: 65/@rem;
+            height: 17/@rem;
+            font-size: 12/@rem;
+            color: #666666;
+            &:nth-of-type(1){
+                top: 41/@rem;
+            }
+            &:nth-of-type(2){
+                top: 63/@rem;
+            }
+        }
+    }
+    //底部
+    #footer{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 375/@rem;
+        height: 49/@rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #fff;
+        div{
+            width: 25/@rem;
+            height: 42/@rem;
+            background-repeat: no-repeat;
+            background-size:25/@rem 25/@rem;
+            display: flex;
+            align-items: flex-end;
+            &.home{
+                background-image: url(../img/tab_home_normal.png);
+                &.active{
+                    background-image: url(../img/tab_home_selected.png);
+                    span{
+                        color: #FF5200;
+                    }
+                }
+            }
+            &.store{
+                background-image: url(../img/tab_store_normal.png);
+                &.active{
+                    background-image: url(../img/tab_store_selected.png);
+                    span{
+                        color: #FF5200;
+                    }
+                }
+            }
+            &.activity{
+                background-image: url(../img/tab_activity_normal.png);
+                &.active{
+                    background-image: url(../img/tab_activity_selected.png);
+                    span{
+                        color: #FF5200;
+                    }
+                }
+            }
+            &.mine{
+                background-image: url(../img/tab_mine_normal.png);
+                &.active{
+                    background-image: url(../img/tab_mine_selected.png);
+                    span{
+                        color: #FF5200;
+                    }
+                }
+            }
+            span{
+                height: 17/@rem;
+                line-height: 17/@rem;
+                color: #999999;
+                font-size: 12/@rem;
+            }
+        }
+    }
+    
+}
